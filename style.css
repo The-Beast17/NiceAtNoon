@@ -1,0 +1,852 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html ,body{
+    height : 100%;
+    width : 100%;
+    font-family: myfont-regular;
+    background-color: #e4e4e4;
+}
+
+@font-face {
+    font-family: myfont-bold;
+    src: url("./64eda5e581cb8e58ed55dea5_apercu-medium.woff2");
+}
+@font-face {
+    font-family: myfont-medium;
+    src: url("./64eda5e581cb8e58ed55dea5_apercu-medium.woff2");
+}
+@font-face {
+    font-family: myfont-regular;
+    src: url("./64eda5e5fdd71ddd3dbbf609_apercu-regular.woff2");
+}
+
+@font-face {
+    font-family : Larken-regular;
+    src : url("./Larken Serif Trial/LarkenDEMO-Regular.otf")
+}
+
+main{
+    overflow: hidden;
+    padding-top : 70px;
+}
+nav{
+    padding : 15px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: myfont-regular;
+    position: fixed;
+    top :0;
+    width : 100%;
+    background-color: #e4e4e4;
+    /* transition: 0.25s linear; */
+    z-index: 100;
+}
+
+nav #n{
+    margin-left : 120px;
+    animation: rotate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes rotate {
+    100%{
+        rotate : 360deg;
+    }
+}
+nav .end{
+    display: flex;
+    gap : 20px;
+}
+
+nav .end h4{
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px 15px; 
+    border : 1px solid rgb(0, 0, 0);
+    border-radius : 10px;
+    transition: 0.25s;
+}
+nav .end h4:hover{
+   background-color: black;
+   color : white;
+}
+
+.hero-section{
+    padding : 30px 70px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-section .left h1{
+    font-family : Larken-regular;
+    font-weight: 500;
+    font-size: 120px;
+    line-height: 0.9;
+}
+
+.hero-section .left h1 svg{
+    position: relative;
+    top : 20px;
+    height : 80px;
+    width : 80px;
+    animation: rotate;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.hero-section .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding : 15px;
+}
+
+.hero-section .right >p{
+   font-size: 18px;
+   padding : 30px 0;
+}
+
+.hero-section .right button {
+    width : max-content;
+    padding : 12px 20px;
+    display: flex;
+    align-items: center;
+    gap : 25px;
+    font-size: 15px;
+    font-weight: 500;
+    border : none;
+    border-radius : 10px;
+    transition: 0.25s;
+    background-color: white;    
+}
+
+.hero-section .right button p{
+    position: relative;
+    padding: 5px 0;
+}
+
+.hero-section .right button p::after{
+    content : "";
+    position: absolute;
+    bottom : 0;
+    left : 0;
+    background-color: #000000;
+    width : 0%;
+    height : 5%;
+    transition: 0.25s;
+}
+
+.hero-section .right button:hover  p::after{
+    width : 100%;
+}
+
+.hero-section .right button:hover{
+    border-radius: 25px;
+}
+
+.hero-section .right button:hover i{
+    scale : 1.3;
+}
+
+.image-section {
+   display: flex;
+   gap : 30px;
+   padding : 40px 0;
+   transform: translateX(-20%);
+}
+
+.image-section img{
+    height : 650px;
+    width : 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius : 120px;
+}
+
+.section-2{
+    padding : 20px 70px;   
+    width : 100%;
+    position: relative;
+}
+.section-2 .section-para p{
+    font-size : 25px;
+}
+
+.section-2 .btn{
+        width : max-content;
+        padding : 12px 20px;
+        display: flex;
+        align-items: center;
+        gap : 25px;
+        font-weight: 500;
+        border : none;
+        border-radius : 10px;
+        transition: 0.25s;
+        background-color: white; 
+        margin:30px 0;
+}
+
+.section-2 .btn span{
+    position: relative;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.section-2  .btn span::after{
+    content : "";
+    position: absolute;
+    bottom : 0;
+    left : 0;
+    background-color: #000000;
+    width : 0%;
+    height : 5%;
+    transition: 0.25s;
+}
+
+.section-2 .btn:hover  span::after{
+    width : 100%;
+}
+.section-2 .btn:hover{
+    border-radius: 25px;
+}
+.section-2 .btn:hover i{
+    scale : 1.3;
+}
+
+.section-2 h5{
+    padding : 50px 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section-2 h1{
+    font-weight:700;
+    line-height: 0.9;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 130px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-2 .inner-button{
+   padding : 22px 25px;
+   background-color: rgb(248, 194, 16);
+   font-size: 20px;
+   font-family: myfont-regular;
+   text-transform: initial;
+   font-weight: 500;
+   letter-spacing: 0;
+   border-radius: 30px;
+   position: absolute;
+   bottom : 12%;
+   right : 25%;
+   rotate: -9deg;
+   border:none;
+}
+
+.section-2 .btn-container{
+   display: flex;
+   justify-content: end;
+}
+
+.section-2  .btn-3{
+    background-color: transparent;
+    border : 1px solid black;
+    display: flex;
+}
+
+
+.section-3{
+    padding : 0 70px;   
+}
+
+.section-3 .card{
+    margin-bottom : 30px;
+    background-image: url("65492b562e62e676d4159713_NS_Wayfinding _ NaN-p-2000.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height : 80vh;
+    width : 100%;
+    border-radius: 30px;
+    transition: 0.25s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;  
+}
+
+.section-3 .card .inner-card{
+    height : 70%;
+    width : 400px;
+    border-radius: 100px;
+    overflow: hidden;
+    opacity : 0;
+    transition: 0.25s linear;
+}
+.section-3 .card .inner-card img{
+    height : 100%;
+    width : 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section-3 .card:hover{
+    background-size: 115%;
+    border-radius: 130px;
+}
+.section-3 .card:hover .inner-card{
+    opacity: 1;
+}
+
+.section-3  p{
+    font-family: sans-serif;
+    font-size: 16px;
+    color : rgb(168, 166, 166);
+    margin-bottom : 5px;
+}
+
+.section-3 h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.section-3 button{
+    text-transform: uppercase;
+    font-size: 10px;
+    padding : 6px 8px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-right: 5px;
+    color : rgb(35, 35, 35);
+    background-color: transparent;
+}
+
+/* /***********section-4 */
+
+.section-4{
+    width : 100%;
+    height : 100%;
+    padding : 20px 70px;
+    padding-bottom: 100px; 
+} 
+
+.section-4 .container{
+    width : 100%;
+    display: flex; 
+}
+
+.section-4 .left{
+   width : 50%; 
+   padding : 10px; 
+
+}
+
+.section-4 .left .card{
+    margin-bottom : 30px;
+    background-image: url("64cac65e2bf6eb87608fe500_GC_Flyers-Nan-min-p-2000.jpg");
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    height : 70vh;
+    width : cover;
+    border-radius: 30px;
+    transition: 0.25s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;  
+}
+
+.section-4 .left .card .inner-card{
+    height : 70%;
+    width : 320px;
+    border-radius: 100px;
+    overflow: hidden;
+    opacity : 0;
+    transition: 0.25s linear;
+}
+.section-4 .left .card .inner-card img{
+    height : 100%;
+    width : 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section-4 .left .card:hover{
+    background-size: 175%;
+    border-radius: 130px;
+}
+.section-4 .left .card:hover .inner-card{
+    opacity: 1;
+}
+
+.section-4 .right{
+    width : 50%; 
+    padding : 10px; 
+    /* background-color: green;  */
+ }
+ 
+ .section-4 .right .card{
+     margin-bottom : 30px;
+     background-image: url("64bbb716dc15a767d726cdea_DM_header-p-2000.jpg");
+     background-position: center;
+     background-size: 150%;
+     background-repeat: no-repeat;
+     height : 90vh;
+     width : cover;
+     border-radius: 30px;
+     transition: 0.25s linear;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer; 
+     box-shadow: 0 1px 10px 1px gray;
+ }
+ 
+ .section-4 .right .card .inner-card{
+     height : 60%;
+     width : 350px;
+     border-radius: 100px;
+     overflow: hidden;
+     opacity : 0;
+     transition: 0.25s linear;
+     
+ }
+ .section-4 .right .card .inner-card img{
+     height : 100%;
+     width : 100%;
+     object-fit: cover;
+     object-position: center;
+ }
+ 
+ .section-4 .right .card:hover{
+     background-size: 175%;
+     border-radius: 130px;
+ }
+ .section-4 .right .card:hover .inner-card{
+     opacity: 1;
+ }
+ .section-4 .content p{
+    font-family: sans-serif;
+    font-size: 16px;
+    color : rgb(168, 166, 166);
+    margin-bottom : 5px;
+}
+
+.section-4 .content  h3{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.section-4 .content button{
+    text-transform: uppercase;
+    font-size: 10px;
+    padding : 6px 8px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-right: 5px;
+    color : rgb(35, 35, 35);
+    background-color: transparent;
+}
+
+.section-4 .bottom {
+    width : 40%;
+    height : 90px;
+    padding : 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius : 17px;
+}
+
+.section-4 .bottom p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-4 .bottom button{
+    width : max-content;
+    padding : 12px 20px;
+    display: flex;
+    align-items: center;
+    gap : 25px;
+    font-weight: 500;
+    border : none;
+    border-radius : 10px;
+    transition: 0.25s;
+    background-color: transparent; 
+    border : 1px solid black;
+    margin:30px 0;
+}
+
+
+.section-4 .bottom button span{
+    position: relative;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.section-4 .bottom button span::after{
+    content : "";
+    position: absolute;
+    bottom : 0;
+    left : 0;
+    background-color: #000000;
+    width : 0%;
+    height : 5%;
+    transition: 0.25s;
+}
+
+.section-4 .bottom button:hover  span::after{
+    width : 100%;
+}
+.section-4 .bottom button:hover{
+    border-radius: 25px;
+}
+.section-4 .bottom button:hover i{
+    scale : 1.3;
+}
+
+
+/******************section-5 *************/
+.section-5{
+    padding: 0px 70px;
+    padding-top: 100px;
+    background-color: #fff;
+}
+
+.section-5 > h4{
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.section-5 .heading{
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-5 .heading p{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.section-5 button{
+    width : max-content;
+    padding : 12px 20px;
+    display: flex;
+    align-items: center;
+    gap : 25px;
+    font-weight: 500;
+    border : none;
+    border-radius : 10px;
+    transition: 0.25s;
+    background-color: rgb(0, 0, 0); 
+    color :white;
+    margin:30px 0;
+}
+
+.section-5  button span{
+position: relative;
+padding: 5px 0;
+font-size: 15px;
+}
+
+.section-5 button span::after{
+content : "";
+position: absolute;
+bottom : 0;
+left : 0;
+background-color: #faf9f9;
+width : 0%;
+height : 5%;
+transition: 0.25s;
+}
+
+.section-5 button:hover  span::after{
+width : 100%;
+}
+.section-5 button:hover{
+border-radius: 25px;
+}
+.section-5 button:hover i{
+scale : 1.3;
+}
+
+.section-5 .content{
+    padding : 10px 0;
+    width : 100%;
+    display: flex;
+    gap : 20px;
+    padding-bottom : 60px;
+}
+
+.section-5 .content .card{
+    width : 350px;
+    height : 470px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.section-5 .content .card .img-box{
+    height : 57%;
+    width : 100%;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.section-5 .content .card .img-box img{
+    height : 100%;
+    width : 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section-5 .content .card .card-content{
+    padding : 30px;
+    color:white;
+    overflow: hidden;
+    background-color: #aa81b7;
+    transition: 0.35s;
+}
+
+.section-5 .content .card .card-content .head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 45px;
+}
+.section-5 .content .card .card-content .head i{
+    opacity :0;
+    font-size: 20px;
+}
+
+.section-5 .content .card .card-content p{
+    font-size: 17px;
+}
+
+.section-5 .content .card:hover .card-content{
+    border-radius: 75px;
+}
+.section-5 .content .card:hover .card-content i{
+    opacity: 1;
+}
+
+.section-5 .content .card:hover .img-box{
+    border-radius: 75px;
+}
+.section-5 .section-5-para p{
+    font-size : 25px;
+}
+
+
+.section-5 .our-belif{
+    text-align: center;
+    padding-top : 60px;
+}
+
+.section-5 > h1{
+    text-align: center;
+    font-weight:700;
+    line-height: 0.9;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 130px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    position: relative;
+}
+
+.section-5 .smily{
+    height : 150px;
+    width : 150px;
+    border-radius: 50%;
+    background-color: #20cd85;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    right : 8.7%;
+    bottom : -8%;
+    animation: rotate 7s linear infinite;
+}
+.section-5 .smily svg{
+    height : 80px;
+    width : 80px;
+}
+
+/************image-2-section*************/
+.image-2-section{
+    padding : 70px;
+    background-color: #fff;
+}
+
+.image-2-section img{
+    height : 125vh;
+    width : 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 150px;
+}
+
+.image-2-section .content{
+    display: flex;
+    align-items: baseline;
+    gap :15px;
+    padding : 10px;
+}
+
+.image-2-section .content button{
+    border : none;
+    font-size: 15px;
+    background-color: #a3a4a7;
+    padding : 7px 15px;
+    border-radius: 25px;
+    color : white;
+}
+
+.image-2-section .content p{
+    color : #a3a4a7;
+    font-weight: 500;
+}
+
+/************************section-6**************/
+.section-6 {
+    padding: 40px 70px;
+    background-color: #fff;
+}
+
+.section-6 h1{
+    font-size: 25px;
+    padding : 10px 0;
+}
+
+.section-6 hr{
+    height : 1px;
+    background-color: black;
+}
+
+.section-6 .content{
+    display: flex;
+    gap : 20%;
+}
+
+.section-6 .content ul li{
+   font-size: 20px;
+   text-transform: uppercase;
+   list-style: none;
+   line-height : 2.1;
+   color : #a3a4a7;
+
+}
+
+.section-6 img{
+    height : 150px; 
+    animation : rotate 7s linear infinite;
+}
+
+.section-6 .img-box{
+    text-align: end;
+}
+
+footer{
+    background-color: black;
+    color :white;
+    padding-top :50px;
+}
+
+footer .content{
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:0 70px;
+    padding-bottom: 70px;
+}
+
+footer .content .left{
+    width : 50%;
+}
+
+footer .content .left h1{
+  font-size: 50px;
+}
+
+footer .content .left button{
+    width : max-content;
+    padding : 12px 20px;
+    display: flex;
+    align-items: center;
+    gap : 25px;
+    font-weight: 500;
+    border-radius : 10px;
+    transition: 0.25s;
+    background-color: rgb(0, 0, 0); 
+    color :white;
+    margin:30px 0;
+    border : 1px solid white;
+}
+
+footer .content .left  button span{
+position: relative;
+padding: 5px 0;
+font-size: 15px;
+}
+
+footer .content .left  button span::after{
+content : "";
+position: absolute;
+bottom : 0;
+left : 0;
+background-color: #faf9f9;
+width : 0%;
+height : 5%;
+transition: 0.25s;
+}
+
+footer .content .left button:hover  span::after{
+width : 100%;
+}
+footer .content .left  button:hover{
+border-radius: 25px;
+}
+footer .content .left  button:hover i{
+scale : 1.3;
+}
+
+footer .content .right{
+    width : 27%;
+    display: flex;
+    gap : 10%;
+}
+
+footer .content .right ul h2{
+   font-size: 20px;
+   font-family: larken-reguler;
+   padding-bottom: 30px;
+}
+footer .content .right ul li{
+    list-style: none;
+    font-size: 12px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+footer .content .right ul li a{
+    text-decoration: none;
+    color : white;
+}
+footer .content .right ul li a:hover{
+    text-decoration: underline;
+}
